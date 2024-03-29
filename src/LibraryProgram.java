@@ -17,7 +17,7 @@ public class LibraryProgram {
         myCopy.borrowItem(lib.getAllMembers().getFirst());
         lib.displayAllMembers();
         lib.displayBorrowedItems();
-        //a mess just for testing....it is functional though..if you find the correct order of creation and add to borrowables..
-        //I assume that
+        //a mess just for testing....it is functional though...if you find the correct order of creation and adds...
+
     }
 }
