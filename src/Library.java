@@ -12,26 +12,7 @@ public class Library {
         members=new ArrayList<Member>();
         this.borrowables=borrowables;
         this.titles=titles;
-
-        //adding a member test
-        int newMembersID= myScanObj.nextInt();
-        myScanObj.nextLine();
-        String newMembersName=myScanObj.nextLine();
-        int newMembersMAX_On_Loan=myScanObj.nextInt();
-        addMember(newMembersID,newMembersName);
-
-
-        //adding a Title test
-        int newBookID= myScanObj.nextInt();
-        myScanObj.nextLine();
-        String newBooktitle=myScanObj.nextLine();
-        String newBookAuthor=myScanObj.nextLine();
-        Book testingBook=new Book(newBookID,newBooktitle,newBookAuthor);
-        addTitle(testingBook);
-
-
-
-    }
+   }
 
     public void addMember(int id, String name){
         members.add(new Member(id,name,6));
