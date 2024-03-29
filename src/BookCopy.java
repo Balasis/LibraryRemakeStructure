@@ -20,7 +20,7 @@ public class BookCopy implements Borrowable{
     }
 
     public void returnItem(){
-
+    this.memberWhoBorrowed=null;
     }
 
 }
