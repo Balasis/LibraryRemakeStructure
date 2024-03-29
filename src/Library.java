@@ -30,6 +30,10 @@ public class Library {
         System.out.println(members);
     }
 
+    public ArrayList<Member> getAllMembers(){
+        return members;
+    }
+
     public void displayAllBorrowables(){
         System.out.println(borrowables);
     }

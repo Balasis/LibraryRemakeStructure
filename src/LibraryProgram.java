@@ -12,6 +12,12 @@ public class LibraryProgram {
         lib.addTitle(book2);
         lib.addTitle(journal);
         BookCopy myCopy=new BookCopy(1,true,book1);
-
+        lib.addBorrowable(myCopy);
+        lib.addMember(1,"Mary");
+        myCopy.borrowItem(lib.getAllMembers().getFirst());
+        lib.displayAllMembers();
+        lib.displayBorrowedItems();
+        //a mess just for testing....it is functional though..if you find the correct order of creation and add to borrowables..
+        //I assume that
     }
 }
