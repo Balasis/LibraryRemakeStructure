@@ -21,14 +21,13 @@ public class BookCopy implements Borrowable{
     }
 
     public void borrowItem(Member member){
-//     if    () perhaps add field into member about how many he owns so far and then compare
-//    this.memberWhoBorrowed=member;
-//    int newMaxOnLoan=member.getMAX_ON_LOAN()+1;
-//    member.setMAX_ON_LOAN();
+        memberWhoBorrowed=member;
+        available=false;
     }
 
     public void returnItem(){
-    this.memberWhoBorrowed=null;
+        memberWhoBorrowed=null;
+        available=true;
     }
 
 }
