@@ -5,6 +5,11 @@ public class BookCopy implements Borrowable{
     private Book book;
     private Member memberWhoBorrowed;
 
+    public BookCopy(int id, boolean available) {
+        this.id = id;
+        this.available = available;
+    }
+
     public BookCopy(int id, boolean available,Book book) {
         this.id = id;
         this.available = available;
@@ -28,6 +33,11 @@ public class BookCopy implements Borrowable{
     public void returnItem(){
         memberWhoBorrowed=null;
         available=true;
+    }
+
+    public void setBook(Book book){
+        this.book=book;
+        book.addBookCopy(this);
     }
 
 }
