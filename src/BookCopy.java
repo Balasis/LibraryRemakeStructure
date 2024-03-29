@@ -1,7 +1,10 @@
 public class BookCopy implements Borrowable{
+
     private int id;
     private boolean available;
+    private Book book;
     private Member memberWhoBorrowed;
+
     public BookCopy(int id, boolean available) {
         this.id = id;
         this.available = available;
