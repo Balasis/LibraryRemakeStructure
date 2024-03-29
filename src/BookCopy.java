@@ -9,6 +9,7 @@ public class BookCopy implements Borrowable{
         this.id = id;
         this.available = available;
         this.book=book;
+        book.addBookCopy(this);
     }
 
     public int getId() {
