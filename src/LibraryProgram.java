@@ -11,6 +11,7 @@ public class LibraryProgram {
         lib.addTitle(book1);
         lib.addTitle(book2);
         lib.addTitle(journal);
+        BookCopy myCopy=new BookCopy(1,true,book1);
 
     }
 }
