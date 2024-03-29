@@ -12,28 +12,56 @@ public class Library {
         members=new ArrayList<Member>();
         this.borrowables=borrowables;
         this.titles=titles;
-        addMember();
-        addBook();
-    }
 
-    private void addMember(){
+        //adding a member test
         int newMembersID= myScanObj.nextInt();
         myScanObj.nextLine();
         String newMembersName=myScanObj.nextLine();
         int newMembersMAX_On_Loan=myScanObj.nextInt();
-        members.add(new Member(newMembersID,newMembersName,newMembersMAX_On_Loan));
-    }
+        addMember(newMembersID,newMembersName);
 
-    private void addBook(){
+
+        //adding a Title test
         int newBookID= myScanObj.nextInt();
         myScanObj.nextLine();
         String newBooktitle=myScanObj.nextLine();
         String newBookAuthor=myScanObj.nextLine();
-        titles.add(new Book(newBookID,newBooktitle,newBookAuthor));
+        Book testingBook=new Book(newBookID,newBooktitle,newBookAuthor);
+        addTitle(testingBook);
+
+
+
     }
 
-    private void addBorrowable(Borrowable borrowable){
-
+    public void addMember(int id, String name){
+        members.add(new Member(id,name,6));
     }
+
+    public void addTitle(Title t){
+        titles.add(t);
+    }
+
+    public void addBorrowable(Borrowable b){
+    borrowables.add(b);
+    }
+
+    public void displayAllMembers(){
+        System.out.println(members);
+    }
+
+    public void displayAllBorrowables(){
+        System.out.println(borrowables);
+    }
+
+    public void displayBorrowedItems(){
+        ArrayList<Borrowable> currentlyBorrowedItems=new ArrayList<Borrowable>();
+        for(Borrowable b:borrowables){
+            if (!b.isAvailable()){
+                currentlyBorrowedItems.add(b);
+            }
+        }
+        System.out.println(currentlyBorrowedItems);
+    }
+
 
 }
