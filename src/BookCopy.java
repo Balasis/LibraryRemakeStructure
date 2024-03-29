@@ -5,9 +5,11 @@ public class BookCopy implements Borrowable{
     private Book book;
     private Member memberWhoBorrowed;
 
-    public BookCopy(int id, boolean available) {
+    public BookCopy(int id, boolean available,Book book) {
         this.id = id;
         this.available = available;
+        this.book=book;
+        book.addBookCopy(this);
     }
 
     public int getId() {
