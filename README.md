@@ -5,7 +5,7 @@
         //cause 2 instances of the same object (since book already exist in the titles)therefore
         //we will have 2 difference references and this could cause issues in our app
 
-        //2)If I  initiate the BookCopies in the method of Book.addBookCopy I need to use a constructor
+        //2)If I  instanitiate the BookCopies in the method of Book.addBookCopy I need to use a constructor
         //which doesn't call back the Book.addBookCopy, therefore the automated addition to the BookCopy array
         //of book needs to get aborted :/ . Otherwise we would add the same bookcopy twice in the array.(Two constructors ;)
 
