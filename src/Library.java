@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Library {
     private Scanner myScanObj;
 
-    private ArrayList<Borrowable> borrowables;
+    private Map<Integer,Borrowable> borrowables;
     private ArrayList<Member> members;
     private Map<Integer,Title> titles;
 
-    public Library(ArrayList<Borrowable> borrowables , Map<Integer,Title> titles){
+    public Library(Map<Integer,Borrowable> borrowables , Map<Integer,Title> titles){
         members=new ArrayList<Member>();
         this.borrowables=borrowables;
         this.titles=titles;
@@ -24,7 +24,10 @@ public class Library {
     }
 
     public void addBorrowable(Borrowable b){
-    borrowables.add(b);
+        if (b instanceof BookCopy){
+
+        }
+//    borrowables.put(b);
     }
 
     public void displayAllMembers(){
@@ -40,13 +43,13 @@ public class Library {
     }
 
     public void displayBorrowedItems(){
-        ArrayList<Borrowable> currentlyBorrowedItems=new ArrayList<Borrowable>();
-        for(Borrowable b:borrowables){
-            if (!b.isAvailable()){
-                currentlyBorrowedItems.add(b);
-            }
-        }
-        System.out.println(currentlyBorrowedItems);
+//        ArrayList<Borrowable> currentlyBorrowedItems=new ArrayList<Borrowable>();
+//        for(Borrowable b:borrowables){
+//            if (!b.isAvailable()){
+//                currentlyBorrowedItems.add(b);
+//            }
+//        }
+//        System.out.println(currentlyBorrowedItems);
     }
 
 
