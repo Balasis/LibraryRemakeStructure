@@ -3,6 +3,11 @@ public class Member {
     private String name;
     private int MAX_ON_LOAN;
 
+    public Member(String name, int MAX_ON_LOAN) {
+        this.name = name;
+        this.MAX_ON_LOAN = MAX_ON_LOAN;
+    }
+
     public Member(int id, String name, int MAX_ON_LOAN) {
         this.id = id;
         this.name = name;
