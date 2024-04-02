@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -6,17 +7,17 @@ public class Library {
     private Scanner myScanObj;
 
     private ArrayList<Borrowable> borrowables;
-    private ArrayList<Member> members;
+    private Map<Integer,Member> members;
     private Map<Integer,Title> titles;
 
     public Library(ArrayList<Borrowable> borrowables , Map<Integer,Title> titles){
-        members=new ArrayList<Member>();
+        members=new HashMap<Integer,Member>();
         this.borrowables=borrowables;
         this.titles=titles;
    }
 
     public void addMember(int id, String name){
-        members.add(new Member(id,name,6));
+        members.put(id,new Member(id,name,6));
     }
 
     public void addTitle(int titleId ,Title title){
@@ -34,31 +35,30 @@ public class Library {
     borrowables.add(b);
     }
 
+    public void displayAllBorrowables(){
+        System.out.println(borrowables);
+    }
+
     public void displayAllMembers(){
         System.out.println(members);
+    }
+
+    public void displayBorrowedItems(){
+        ArrayList<Borrowable> currentlyBorrowedItems=new ArrayList<Borrowable>();
+        for(Borrowable b:borrowables){
+            if (!b.isAvailable()){
+                currentlyBorrowedItems.add(b);
+            }
+        }
+        System.out.println(currentlyBorrowedItems);
     }
 
     public Map<Integer,Title> getAllTitles(){
        return titles;
     }
 
-    public ArrayList<Member> getAllMembers(){
+    public Map<Integer,Member> getAllMembers(){
         return members;
     }
-
-    public void displayAllBorrowables(){
-        System.out.println(borrowables);
-    }
-
-    public void displayBorrowedItems(){
-//        ArrayList<Borrowable> currentlyBorrowedItems=new ArrayList<Borrowable>();
-//        for(Borrowable b:borrowables){
-//            if (!b.isAvailable()){
-//                currentlyBorrowedItems.add(b);
-//            }
-//        }
-//        System.out.println(currentlyBorrowedItems);
-    }
-
 
 }
