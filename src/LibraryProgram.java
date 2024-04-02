@@ -10,7 +10,6 @@ public class LibraryProgram {
         //Drag from database the titles and any other borrowables
 
 
-
 //        Book book1=new Book(1,"The Who","WhoKnows");
 //        Book book2=new Book(2,"The What","WhoKnows");
 //        Journal journal=new Journal(3,"The Which","John Balasis");
