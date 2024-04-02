@@ -7,27 +7,21 @@ public class LibraryProgram {
         ArrayList<Borrowable> borrowables=new ArrayList<Borrowable>();
         Map<Integer,Title> titles=new HashMap<Integer,Title>();
         Library lib=new Library(borrowables,titles);
-        Book book1=new Book(1,"The Who","WhoKnows");
-        Book book2=new Book(2,"The What","WhoKnows");
-        Journal journal=new Journal(3,"The Which","John Balasis");
-        lib.addTitle(1,book1);
-        lib.addTitle(2,book2);
-        lib.addTitle(3,journal);
-
-        BookCopy myCopy=new BookCopy(1,true,2);
-        lib.addBorrowable(myCopy);
-        lib.displayAllBorrowables();
-
-        System.out.println(lib.getAllTitles().get(2));
+        //Drag from database the titles and any other borrowables
 
 
-//        lib.addMember(1,"Mary");
 
-
+//        Book book1=new Book(1,"The Who","WhoKnows");
+//        Book book2=new Book(2,"The What","WhoKnows");
+//        Journal journal=new Journal(3,"The Which","John Balasis");
+//        lib.addTitle(1,book1);
+//        lib.addTitle(2,book2);
+//        lib.addTitle(3,journal);
 //
-//        myCopy.borrowItem(lib.getAllMembers().getFirst());
-//        lib.displayAllMembers();
-//        lib.displayBorrowedItems();
+//        BookCopy myCopy=new BookCopy(1,true,2);
+//        lib.addBorrowable(myCopy);
+//        lib.displayAllBorrowables();
+
 
     }
 }

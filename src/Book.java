@@ -30,11 +30,4 @@ public class Book extends Title{
     public Map<Integer,BookCopy> getBookCopies(){
         return bookCopies;
     }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bookCopies=" + bookCopies +
-                '}';
-    }
 }
