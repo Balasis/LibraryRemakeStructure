@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Library {
     private Scanner myScanObj;
 
-    private Map<Integer,Borrowable> borrowables;
+    private ArrayList<Borrowable> borrowables;
     private ArrayList<Member> members;
     private Map<Integer,Title> titles;
 
-    public Library(Map<Integer,Borrowable> borrowables , Map<Integer,Title> titles){
+    public Library(ArrayList<Borrowable> borrowables , Map<Integer,Title> titles){
         members=new ArrayList<Member>();
         this.borrowables=borrowables;
         this.titles=titles;
@@ -25,13 +25,21 @@ public class Library {
 
     public void addBorrowable(Borrowable b){
         if (b instanceof BookCopy){
-
+            int bookId=((BookCopy) b).getBookId();
+            if (titles.containsKey(bookId)){
+               Book book= (Book) titles.get(bookId);
+               book.addBookCopy( ((BookCopy) b) );
+            }
         }
-//    borrowables.put(b);
+    borrowables.add(b);
     }
 
     public void displayAllMembers(){
         System.out.println(members);
+    }
+
+    public Map<Integer,Title> getAllTitles(){
+       return titles;
     }
 
     public ArrayList<Member> getAllMembers(){

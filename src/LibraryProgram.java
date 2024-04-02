@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class LibraryProgram {
     public static void main(String[] args) {
-        Map<Integer,Borrowable> borrowables=new HashMap<Integer,Borrowable>();
+        ArrayList<Borrowable> borrowables=new ArrayList<Borrowable>();
         Map<Integer,Title> titles=new HashMap<Integer,Title>();
         Library lib=new Library(borrowables,titles);
         Book book1=new Book(1,"The Who","WhoKnows");
@@ -13,7 +13,14 @@ public class LibraryProgram {
         lib.addTitle(1,book1);
         lib.addTitle(2,book2);
         lib.addTitle(3,journal);
+
         BookCopy myCopy=new BookCopy(1,true,2);
+        lib.addBorrowable(myCopy);
+        lib.displayAllBorrowables();
+
+        System.out.println(lib.getAllTitles().get(2));
+
+
 //        lib.addMember(1,"Mary");
 
 
