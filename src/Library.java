@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Library {
@@ -6,9 +7,9 @@ public class Library {
 
     private ArrayList<Borrowable> borrowables;
     private ArrayList<Member> members;
-    private ArrayList<Title> titles;
+    private Map<Integer,Title> titles;
 
-    public Library(ArrayList<Borrowable> borrowables , ArrayList<Title> titles){
+    public Library(ArrayList<Borrowable> borrowables , Map<Integer,Title> titles){
         members=new ArrayList<Member>();
         this.borrowables=borrowables;
         this.titles=titles;
@@ -18,8 +19,8 @@ public class Library {
         members.add(new Member(id,name,6));
     }
 
-    public void addTitle(Title t){
-        titles.add(t);
+    public void addTitle(int titleId ,Title title){
+        titles.put(titleId,title);
     }
 
     public void addBorrowable(Borrowable b){

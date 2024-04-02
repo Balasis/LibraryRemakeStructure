@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LibraryProgram {
     public static void main(String[] args) {
         ArrayList<Borrowable> borrowables=new ArrayList<Borrowable>();
-        ArrayList<Title> titles=new ArrayList<Title>();
+        Map<Integer,Title> titles=new HashMap<Integer,Title>();
         Library lib=new Library(borrowables,titles);
         //There is a mess which I cant really yet define in the BookCopy in order to recreate it
         //from database.Things considering so far are the following:
@@ -25,9 +27,9 @@ public class LibraryProgram {
         Book book1=new Book(1,"The Who","WhoKnows");
         Book book2=new Book(2,"The What","WhoKnows");
         Journal journal=new Journal(3,"The Which","John Balasis");
-        lib.addTitle(book1);
-        lib.addTitle(book2);
-        lib.addTitle(journal);
+        lib.addTitle(1,book1);
+        lib.addTitle(2,book2);
+        lib.addTitle(3,journal);
         BookCopy myCopy=new BookCopy(1,true,book1);
         lib.addBorrowable(myCopy);
         lib.addMember(1,"Mary");
