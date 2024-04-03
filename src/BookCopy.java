@@ -52,7 +52,7 @@ public class BookCopy implements Borrowable{
     }
 
     public int getFullId() {
-        return Integer.parseInt(id+""+categoryId);
+        return Integer.parseInt(categoryId+""+id);
     }
 
     public int getBookId() {
