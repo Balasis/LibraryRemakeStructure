@@ -7,14 +7,16 @@ public class BookCopy implements Borrowable{
     private int bookId;//For sql fetch reasons
     private Member memberWhoBorrowed;
 
-    public BookCopy(int id, boolean available,int bookId) {
+    public BookCopy(int id,int categoryId, boolean available,int bookId) {
         this.id = id;
+        this.categoryId=categoryId;
         this.available = available;
         this.bookId=bookId;
     }
 
-    public BookCopy(int id, boolean available,Book book) {
+    public BookCopy(int id, int categoryId, boolean available,Book book) {
         this.id = id;
+        this.categoryId=categoryId;
         this.available = available;
         this.book=book;
         this.bookId=book.getId();
