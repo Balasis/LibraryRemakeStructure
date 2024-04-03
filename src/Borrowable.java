@@ -5,4 +5,5 @@ public interface Borrowable {
     int getId();
     int getCategoryId();
     int getFullId();
+    String getName();
 }

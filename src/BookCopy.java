@@ -47,6 +47,10 @@ public class BookCopy implements Borrowable{
         return categoryId;
     }
 
+    public String getName() {
+        return (book!=null) ? book.getTitle() : "Unknown" ;
+    }
+
     public int getFullId() {
         return Integer.parseInt(id+""+categoryId);
     }
