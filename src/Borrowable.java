@@ -4,4 +4,5 @@ public interface Borrowable {
     boolean isAvailable();
     int getId();
     int getCategoryId();
+    int getFullId();
 }
