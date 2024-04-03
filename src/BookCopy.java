@@ -1,6 +1,7 @@
 public class BookCopy implements Borrowable{
 
     private int id;
+    private int categoryId;
     private boolean available;
     private Book book;
     private int bookId;//For sql fetch reasons
@@ -38,6 +39,10 @@ public class BookCopy implements Borrowable{
 
     public int getId() {
         return id;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
     }
 
     public int getBookId() {

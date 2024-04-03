@@ -3,4 +3,5 @@ public interface Borrowable {
     void returnItem();
     boolean isAvailable();
     int getId();
+    int getCategoryId();
 }
