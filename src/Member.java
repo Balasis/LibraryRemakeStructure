@@ -1,17 +1,15 @@
 public class Member {
     private int id;
     private String name;
-    private int MAX_ON_LOAN;
+    static final int MAX_ON_LOAN=6;
 
-    public Member(String name, int MAX_ON_LOAN) {
+    public Member(String name) {
         this.name = name;
-        this.MAX_ON_LOAN = MAX_ON_LOAN;
     }
 
-    public Member(int id, String name, int MAX_ON_LOAN) {
+    public Member(int id, String name) {
         this.id = id;
         this.name = name;
-        this.MAX_ON_LOAN = MAX_ON_LOAN;
     }
 
     public int getId() {
@@ -32,9 +30,5 @@ public class Member {
 
     public int getMAX_ON_LOAN() {
         return MAX_ON_LOAN;
-    }
-
-    public void setMAX_ON_LOAN(int MAX_ON_LOAN) {
-        this.MAX_ON_LOAN = MAX_ON_LOAN;
     }
 }

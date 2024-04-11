@@ -17,7 +17,7 @@ public class Library {
    }
 
     public void addMember(int id, String name){
-        members.put(id,new Member(id,name,6));
+        members.put(id,new Member(id,name));
     }
 
     public void addTitle(int titleId ,Title title){
