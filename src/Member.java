@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 public class Member {
     private int id;
     private String name;
     static final int MAX_ON_LOAN=6;
+    private ArrayList<Borrowable> onLoan=new ArrayList<>();
 
     public Member(String name) {
         this.name = name;
@@ -30,5 +33,13 @@ public class Member {
 
     public int getMAX_ON_LOAN() {
         return MAX_ON_LOAN;
+    }
+
+    public void addOnLoan(Borrowable borrowable){
+        onLoan.add(borrowable);
+    }
+
+    public void returnBorrowable(Borrowable borrowable){
+        onLoan.remove(borrowable);
     }
 }

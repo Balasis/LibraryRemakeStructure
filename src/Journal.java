@@ -5,4 +5,12 @@ public class Journal extends Title{
         super(id, title);
         this.editor = editor;
     }
+
+    public String getEditor() {
+        return editor;
+    }
+
+    public void setEditor(String editor) {
+        this.editor = editor;
+    }
 }
