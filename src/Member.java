@@ -4,10 +4,11 @@ public class Member {
     private int id;
     private String name;
     static final int MAX_ON_LOAN=6;
-    private ArrayList<Borrowable> onLoan=new ArrayList<>();
+    private ArrayList<Borrowable> onLoan;
 
     public Member(String name) {
         this.name = name;
+        onLoan=new ArrayList<>();
     }
 
     public Member(int id, String name) {
