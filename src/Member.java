@@ -36,11 +36,14 @@ public class Member {
         return MAX_ON_LOAN;
     }
 
-    public void addOnLoan(Borrowable borrowable){
+    public void borrows(Borrowable borrowable){
+        //if member has the maximum on loan then throw an exception
         onLoan.add(borrowable);
+        borrowable.borrowItem(this);
     }
 
     public void returnBorrowable(Borrowable borrowable){
         onLoan.remove(borrowable);
+        borrowable.returnItem();
     }
 }
